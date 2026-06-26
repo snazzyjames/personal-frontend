@@ -3,11 +3,10 @@ import './App.css'
 
 const skills = [
   'Python',
-  'Go',
   'Rust',
+  'Go',
   'React / TS / Node',
   'Kubernetes',
-  'Kafka',
   'LangGraph',
 ]
 
