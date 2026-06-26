@@ -1,0 +1,67 @@
+:root {
+  --bg: #050705;
+  --bg-soft: #0a0f0a;
+  --green: #00ff66;
+  --green-bright: #4dffa0;
+  --green-dim: #34d17a;
+  --green-muted: #5d8f74;
+  --text: #9bb3a4;
+  --text-mute: #5d7367;
+  --border: #14361f;
+  --glow: 0 0 12px rgba(0, 255, 102, 0.45);
+
+  --mono: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace;
+  --fs-sm: 0.95rem;
+
+  /* layout */
+  --content-width: 720px;
+  --gutter: clamp(1.25rem, 5vw, 2rem);
+  --edge-gap: 1.25rem; /* space on both sides of the top-nav separator */
+
+  font: 16px/1.6 var(--mono);
+  color-scheme: dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--bg);
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--green-dim);
+  text-decoration: none;
+  transition:
+    color 0.15s ease,
+    text-shadow 0.15s ease;
+}
+
+a:hover {
+  color: var(--green-bright);
+  text-shadow: var(--glow);
+}
+
+::selection {
+  background: rgba(0, 255, 102, 0.25);
+  color: var(--green-bright);
+}

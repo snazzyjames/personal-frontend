@@ -1,0 +1,161 @@
+.matrix-rain {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.topnav {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--edge-gap) var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--border);
+}
+
+.topnav .brand {
+  font-size: var(--fs-sm);
+}
+
+.topnav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.topnav-links a {
+  font-size: var(--fs-sm);
+}
+
+.topnav-links a .tilde {
+  color: var(--text-mute);
+}
+
+.shell {
+  position: relative;
+  z-index: 1;
+  max-width: var(--content-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--edge-gap) var(--gutter);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+
+.prompt {
+  font-size: var(--fs-sm);
+  color: var(--green-dim);
+}
+
+/* the typed command sits in a dimmer, softer green — terminal-style */
+.prompt .cmd {
+  color: var(--green-muted);
+}
+
+.name {
+  margin: 0;
+  font-size: clamp(2.5rem, 9vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: var(--green);
+  text-shadow: 0 0 18px rgba(0, 255, 102, 0.35);
+}
+
+.role {
+  margin: 0;
+  font-size: clamp(var(--fs-sm), 3vw, 1.15rem);
+  color: var(--green-bright);
+}
+
+.role .sep {
+  color: var(--text-mute);
+}
+
+.bio {
+  margin: 0;
+  max-width: 62ch;
+  color: var(--text);
+}
+
+.skills {
+  list-style: none;
+  margin: 0.25rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.skills li {
+  font-size: 0.85rem;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg-soft);
+  color: var(--green-dim);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.links a {
+  position: relative;
+  font-size: var(--fs-sm);
+}
+
+.links a::before {
+  content: '> ';
+  color: var(--text-mute);
+}
+
+.cursor-line {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: var(--fs-sm);
+  color: var(--green-dim);
+}
+
+.cursor {
+  display: inline-block;
+  width: 0.6em;
+  height: 1.1em;
+  margin-left: 0.5rem;
+  background: var(--green);
+  box-shadow: var(--glow);
+  animation: blink 1.1s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor {
+    animation: none;
+  }
+}

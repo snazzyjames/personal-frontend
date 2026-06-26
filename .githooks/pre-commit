@@ -1,0 +1,5 @@
+#!/bin/sh
+# Run lint + format checks before allowing a commit.
+# Configured via `core.hooksPath` (set by the package.json "prepare" script).
+
+npm run check
