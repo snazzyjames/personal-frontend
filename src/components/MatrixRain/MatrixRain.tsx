@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import styles from './MatrixRain.module.css'
 
 /**
  * Subtle Matrix-style glyph rain rendered to a full-screen canvas.
@@ -72,5 +73,7 @@ export function MatrixRain() {
     }
   }, [])
 
-  return <canvas ref={canvasRef} className="matrix-rain" aria-hidden="true" />
+  return (
+    <canvas ref={canvasRef} className={styles.matrixRain} aria-hidden="true" />
+  )
 }
