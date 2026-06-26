@@ -45,7 +45,7 @@ export function MatrixRain() {
       lastTime = time
 
       // translucent fill leaves fading trails behind each glyph
-      ctx.fillStyle = 'rgba(5, 7, 5, 0.08)'
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.08)'
       ctx.fillRect(0, 0, canvas.width, canvas.height)
 
       ctx.font = `${fontSize}px ui-monospace, monospace`

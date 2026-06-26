@@ -48,9 +48,8 @@ function App() {
         <h1 className="name">James McNiff</h1>
 
         <p className="role">
-          Manager
+          Leader
           <span className="sep"> · </span>Principal Engineer
-          <span className="sep"> · </span>Architect
           <span className="sep"> · </span>DevSecOps
         </p>
 
