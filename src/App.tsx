@@ -41,7 +41,7 @@ function App() {
 
       <main className="shell">
         <header className="prompt">
-          james@mcniff:~$<span className="cmd"> whoami</span>
+          guest@jamesmcniff.com:~$<span className="cmd"> whoami</span>
         </header>
 
         <h1 className="name">James McNiff</h1>
@@ -87,7 +87,7 @@ function App() {
         </nav>
 
         <footer className="cursor-line">
-          james@mcniff:~$
+          guest@jamesmcniff.com:~$
           <span className="cursor" aria-hidden="true" />
         </footer>
       </main>
